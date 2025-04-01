@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Red Hat Text", sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    --red: hsl(14, 86%, 42%);
+    --green: hsl(159, 69%, 38%); 
+    --rose50: hsl(20, 50%, 98%);
+    --rose100: hsl(13, 31%, 94%);
+    --rose300: hsl(14, 25%, 72%);
+    --rose400: hsl(7, 20%, 60%);
+    --rose500: hsl(12, 20%, 44%);
+    --rose900: hsl(14, 65%, 9%);
+  }
+.card-con{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 285px;
+    overflow: hidden;
+    border-radius: 8px;
+    /* background: var(--rose50); */
+}
+.card-img{
+    position:relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    width: 285px;
+    height: 285px;
+    border-radius: 8px;
+}
+.card-img .img{
+    width: 100%;
+    height: 100%; 
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.card-img .card-btn{
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    bottom: -9%;
+    width: 60%;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 1px solid var(--rose400);
+    outline: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background: var(--rose50);
+}
+.card-img .card-btn img{
+    width: 20px;
+    height: 20px;
+}
+.card-details{
+    padding-top: 35px;
+    padding-bottom: 20px;
+    line-height: 25px;
+    font-size: 16px;
+}
+.card-details .name{
+    font-weight: 600;
+    color: var(--rose500);
+}
+.card-details .description{
+    font-weight: 600;
+}
+.card-details .price{
+    font-weight: 600;
+    color: var(--red);
+}
+.minus, .plus{
+    padding: 10px 5px;
+    height: 100%;
+    width: 40%;
+    /* background: var(--green) */
+}
+.count{
+    padding: 5px;
+    height: 100%;
+    width: 25%;
+    /* background: var(--red) */
+}
+.alternative{
+    display: inline-flex;
+    justify-content: space-around;
+    padding: 10px;
+    width: 80%;
+}
