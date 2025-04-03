@@ -7,6 +7,7 @@ function Confirm(prop) {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const myTotal = prop.selectedCard.reduce((accumulator, e)=> accumulator + e.price, 0);
   return (
     <>
         <button 
@@ -45,14 +46,14 @@ function Confirm(prop) {
                                     </div>
                                     <div className="confirm-two">
                                         <p className="my-title">{e.name}</p>
-                                        <p><span className="my-value">{e.count}</span><span className="my-price">@ ${e.price}</span><span className="my-addedprice">${prop.totalPrice}</span></p>  
+                                        <p><span className="my-value">{e.count}x</span><span className="my-price">@ ${e.price}</span><span className="my-addedprice">${e.price}</span></p>  
                                     </div>
                                 </div>
                             )
                         })):(null)}
                         <div className="confirm-three">
                             <p className="total-info">Order Total</p>
-                            <p className="total-price">$5.0</p>
+                            <p className="total-price">${myTotal}</p>
                         </div>
                 </div>
                 <button 
@@ -61,6 +62,7 @@ function Confirm(prop) {
                     onClick={()=>{
                         handleClose()
                         prop.handleDisplay(1)
+                        window.location.reload();
                     }}
                 >
                     Start New Order

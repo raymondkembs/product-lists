@@ -38,7 +38,6 @@
   height: auto;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  /* background: var(--rose50) */
 }
 .conRight .cart-title{
   margin: 10px 0 10px 0;
@@ -162,6 +161,7 @@
 .items{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
 }
 .cart-confirm{
   display: block;
@@ -179,7 +179,7 @@
   flex-direction: column;
   padding: 20px;
   top: 10px;
-  left: -130%;
+  left: -125%;
   width: 450px;
   border-radius: 15px;
   background: white;
@@ -268,3 +268,57 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 1244px) {
+  .App{
+    padding: 50px; 
+    flex-direction: column;
+  }
+  .conLeft{
+    width: 100%;
+    height: auto;
+  }
+  .items{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .myModal{
+    left: 120%;
+  }
+}
+@media (max-width: 1014px) {
+  .items{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .conRight{
+    width: 60%;
+  }
+  .myModal{
+    left: 50%;
+  }
+}
+@media (max-width: 730px) {
+  .items{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .conRight{
+    width: 100%;
+  }
+  .myModal{
+    left: 15%;
+  }
+}
+@media (max-width: 600px) {
+  .App{
+    padding: 10px; 
+  }
+  .conRight{
+    width: 100%;
+  }
+  .myModal{
+    top: -50px;
+    left: 0%;
+    width: 100%
+  }
+
+}
+
+

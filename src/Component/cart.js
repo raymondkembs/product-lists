@@ -3,7 +3,8 @@ import Confirm from './confirm';
 import React from 'react';
 
 export default function Cart(prop){
-    let totalPrice;
+    let totalPrice, nocount=0;
+    prop.selectedCard !== undefined? nocount = prop.selectedCard.length : console.log(null)
     prop.selectedCard !== undefined? totalPrice = (
         totalPrice = prop.selectedCard.reduce((accumulator, e) => accumulator + e.price, 0)
     ):console.log(null)
@@ -12,7 +13,7 @@ export default function Cart(prop){
 
     return(
         <div className="conRight">
-            <div className="cart-title">Your Cart (0)</div>
+            <div className="cart-title">Your Cart ({nocount})</div>
             {prop.selectedCard == undefined? (
             <>
                 <div className="cart-imgs">
@@ -29,7 +30,7 @@ export default function Cart(prop){
                         return(
                             <div key={e.id} className="cart-one">
                                 <p className="one-title">{e.name}</p>
-                                <p><span className="span-one">{e.count}</span><span className="span-two">@ {x} </span><span className="span-three"> ${price}</span></p>
+                                <p><span className="span-one">{e.count}x</span><span className="span-two">@ {e.price} </span><span className="span-three"> ${e.price * e.count}</span></p>
                                 <div className="cart-img">
                                     <img 
                                         src="/images/icon-remove-item.svg" 

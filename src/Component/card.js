@@ -5,7 +5,6 @@ export default function Card(prop){
     const [count, setCount] = useState(1);
     const [show, setShow] = useState(true);
 
-
     const handleDecrement = () =>{
         if(count > 1){
             setCount(count - 1);
