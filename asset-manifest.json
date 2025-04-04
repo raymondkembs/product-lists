@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/raymondkembs/product-lists/static/css/main.e0dd344b.css",
+    "main.js": "/raymondkembs/product-lists/static/js/main.09d282a5.js",
+    "index.html": "/raymondkembs/product-lists/index.html",
+    "main.e0dd344b.css.map": "/raymondkembs/product-lists/static/css/main.e0dd344b.css.map",
+    "main.09d282a5.js.map": "/raymondkembs/product-lists/static/js/main.09d282a5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e0dd344b.css",
+    "static/js/main.09d282a5.js"
+  ]
+}
